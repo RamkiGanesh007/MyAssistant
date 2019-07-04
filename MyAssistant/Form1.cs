@@ -19,7 +19,23 @@ namespace MyAssistant
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+                
+        }
 
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.button1.BackColor = Color.Black;
+            this.button1.ForeColor =Color.White ;
         }
     }
 }
