@@ -12,10 +12,12 @@ namespace MyAssistant
 {
     public partial class MainForm : Form
     {
+        bool Roughb, QAb, Projectsb, MyProgrb;  // White ==false && Black ==true
         public MainForm()
         {
             InitializeComponent();
         }
+        
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -26,66 +28,117 @@ namespace MyAssistant
         {
 
         }
+        void boolean_declarationfun()
+        {
 
+        }
        
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+      
+        private void RoughWork_Click(object sender, EventArgs e)
         {
-            if (Rough.BackColor == Color.Black || QA.BackColor == Color.Black || Projects.BackColor == Color.Black || MyProgr.BackColor == Color.Black)
-            {
-                this.Rough.BackColor = Color.White;
-                this.Rough.ForeColor = Color.Black;
-            }
-            else
-            {
-                this.Rough.BackColor = Color.Black;
-                this.Rough.ForeColor = Color.White;
-            }
+            this.RoughWork.BackColor = Color.White;
+            this.RoughWork.ForeColor = Color.Black;
+
+            this.QA.BackColor = Color.Black;
+            this.QA.ForeColor = Color.White;
+
+            this.MyIdeas.BackColor = Color.Black;
+            this.MyIdeas.ForeColor = Color.White;
+
+            this.Projects.BackColor = Color.Black;
+            this.Projects.ForeColor = Color.White;
+
+            this.MyProgress.BackColor = Color.Black;
+            this.MyProgress.ForeColor = Color.White;
         }
 
         private void QA_Click(object sender, EventArgs e)
         {
-            if (Rough.BackColor == Color.Black || QA.BackColor == Color.Black || Projects.BackColor == Color.Black || MyProgr.BackColor == Color.Black)
-            {
-                this.QA.BackColor = Color.White;
-                this.QA.ForeColor = Color.Black;
-            }
-            else
-            {
-                this.QA.BackColor = Color.Black;
-                this.QA.ForeColor = Color.White;
-            }
+            this.RoughWork.BackColor = Color.Black;
+            this.RoughWork.ForeColor = Color.White;
 
+            this.QA.BackColor = Color.White;
+            this.QA.ForeColor = Color.Black;
+
+            this.MyIdeas.BackColor = Color.Black;
+            this.MyIdeas.ForeColor = Color.White;
+
+            this.Projects.BackColor = Color.Black;
+            this.Projects.ForeColor = Color.White;
+
+            this.MyProgress.BackColor = Color.Black;
+            this.MyProgress.ForeColor = Color.White;
+        }
+
+        private void MyIdeas_Click(object sender, EventArgs e)
+        {
+            this.RoughWork.BackColor = Color.Black;
+            this.RoughWork.ForeColor = Color.White;
+
+            this.QA.BackColor = Color.Black;
+            this.QA.ForeColor = Color.White;
+
+            this.MyIdeas.BackColor = Color.White;
+            this.MyIdeas.ForeColor = Color.Black;
+
+            this.Projects.BackColor = Color.Black;
+            this.Projects.ForeColor = Color.White;
+
+            this.MyProgress.BackColor = Color.Black;
+            this.MyProgress.ForeColor = Color.White;
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            this.RoughWork.BackColor = Color.White;
+            this.RoughWork.ForeColor = Color.Black;
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Close();
         }
 
         private void Projects_Click(object sender, EventArgs e)
         {
-            if (Rough.BackColor == Color.Black || QA.BackColor == Color.Black || Projects.BackColor == Color.Black || MyProgr.BackColor == Color.Black)
-            {
-                this.Projects.BackColor = Color.White;
-                this.Projects.ForeColor = Color.Black;
-            }
-            else
-            {
-                this.Projects.BackColor = Color.Black;
-                this.Projects.ForeColor = Color.White;
-            }
+            this.RoughWork.BackColor = Color.Black;
+            this.RoughWork.ForeColor = Color.White;
+
+            this.QA.BackColor = Color.Black;
+            this.QA.ForeColor = Color.White;
+
+            this.MyIdeas.BackColor = Color.Black;
+            this.MyIdeas.ForeColor = Color.White;
+
+            this.Projects.BackColor = Color.White;
+            this.Projects.ForeColor = Color.Black;
+
+            this.MyProgress.BackColor = Color.Black;
+            this.MyProgress.ForeColor = Color.White;
         }
 
-        private void MyProgr_Click(object sender, EventArgs e)
+        private void MyProgress_Click(object sender, EventArgs e)
         {
-            if (Rough.BackColor == Color.Black || QA.BackColor == Color.Black || Projects.BackColor == Color.Black || MyProgr.BackColor == Color.Black)
-            {
-                this.MyProgr.BackColor = Color.White;
-                this.MyProgr.ForeColor = Color.Black;
-            }
-            else
-            {
-                this.MyProgr.BackColor = Color.Black;
-                this.MyProgr.ForeColor = Color.White;
-            }
-           
+            this.RoughWork.BackColor = Color.Black;
+            this.RoughWork.ForeColor = Color.White;
+
+            this.QA.BackColor = Color.Black;
+            this.QA.ForeColor = Color.White;
+
+            this.MyIdeas.BackColor = Color.Black;
+            this.MyIdeas.ForeColor = Color.White;
+
+            this.Projects.BackColor = Color.Black;
+            this.Projects.ForeColor = Color.White;
+
+            this.MyProgress.BackColor = Color.White;
+            this.MyProgress.ForeColor = Color.Black;
         }
+
+
 
         private void richTextBox1_MouseDown(object sender, MouseEventArgs e)
         {
