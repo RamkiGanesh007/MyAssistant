@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TextArea = new System.Windows.Forms.RichTextBox();
             this.RoughWork = new Bunifu.UI.WinForms.BunifuLabel();
             this.QA = new Bunifu.UI.WinForms.BunifuLabel();
             this.MyIdeas = new Bunifu.UI.WinForms.BunifuLabel();
@@ -38,22 +38,25 @@
             this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Home = new Bunifu.UI.WinForms.BunifuLabel();
             this.Exit = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Projects_Text = new System.Windows.Forms.RichTextBox();
+            this.MyIdeas_Text = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // TextArea
             // 
-            this.richTextBox1.AcceptsTab = true;
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.richTextBox1.EnableAutoDragDrop = true;
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(1, 88);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBox1.Size = new System.Drawing.Size(942, 485);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            this.richTextBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBox1_MouseDown);
+            this.TextArea.AcceptsTab = true;
+            this.TextArea.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.TextArea.EnableAutoDragDrop = true;
+            this.TextArea.ForeColor = System.Drawing.Color.White;
+            this.TextArea.Location = new System.Drawing.Point(1, 88);
+            this.TextArea.Name = "TextArea";
+            this.TextArea.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.TextArea.Size = new System.Drawing.Size(942, 485);
+            this.TextArea.TabIndex = 0;
+            this.TextArea.Text = "";
+            this.TextArea.TextChanged += new System.EventHandler(this.TextArea_TextChanged);
+            this.TextArea.MouseDown += new System.Windows.Forms.MouseEventHandler(this.richTextBox1_MouseDown);
             // 
             // RoughWork
             // 
@@ -212,6 +215,47 @@
             this.Exit.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // Projects_Text
+            // 
+            this.Projects_Text.AcceptsTab = true;
+            this.Projects_Text.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Projects_Text.EnableAutoDragDrop = true;
+            this.Projects_Text.ForeColor = System.Drawing.Color.White;
+            this.Projects_Text.Location = new System.Drawing.Point(1, 88);
+            this.Projects_Text.Name = "Projects_Text";
+            this.Projects_Text.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.Projects_Text.Size = new System.Drawing.Size(942, 485);
+            this.Projects_Text.TabIndex = 14;
+            this.Projects_Text.Text = "";
+            // 
+            // MyIdeas_Text
+            // 
+            this.MyIdeas_Text.AcceptsTab = true;
+            this.MyIdeas_Text.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.MyIdeas_Text.EnableAutoDragDrop = true;
+            this.MyIdeas_Text.ForeColor = System.Drawing.Color.White;
+            this.MyIdeas_Text.Location = new System.Drawing.Point(0, 88);
+            this.MyIdeas_Text.Name = "MyIdeas_Text";
+            this.MyIdeas_Text.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.MyIdeas_Text.Size = new System.Drawing.Size(942, 485);
+            this.MyIdeas_Text.TabIndex = 15;
+            this.MyIdeas_Text.Text = "";
+            this.MyIdeas_Text.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.AcceptsTab = true;
+            this.richTextBox3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.richTextBox3.EnableAutoDragDrop = true;
+            this.richTextBox3.ForeColor = System.Drawing.Color.White;
+            this.richTextBox3.Location = new System.Drawing.Point(0, 88);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.richTextBox3.Size = new System.Drawing.Size(942, 485);
+            this.richTextBox3.TabIndex = 16;
+            this.richTextBox3.Text = "";
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,7 +271,10 @@
             this.Controls.Add(this.MyIdeas);
             this.Controls.Add(this.QA);
             this.Controls.Add(this.RoughWork);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.TextArea);
+            this.Controls.Add(this.richTextBox3);
+            this.Controls.Add(this.MyIdeas_Text);
+            this.Controls.Add(this.Projects_Text);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
@@ -243,7 +290,7 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox TextArea;
         private Bunifu.UI.WinForms.BunifuLabel RoughWork;
         private Bunifu.UI.WinForms.BunifuLabel QA;
         private Bunifu.UI.WinForms.BunifuLabel MyIdeas;
@@ -252,6 +299,9 @@
         private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
         private Bunifu.UI.WinForms.BunifuLabel Home;
         private Bunifu.UI.WinForms.BunifuLabel Exit;
+        private System.Windows.Forms.RichTextBox Projects_Text;
+        private System.Windows.Forms.RichTextBox MyIdeas_Text;
+        private System.Windows.Forms.RichTextBox richTextBox3;
     }
 }
 

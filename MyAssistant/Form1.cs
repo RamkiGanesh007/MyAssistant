@@ -12,33 +12,54 @@ namespace MyAssistant
 {
     public partial class MainForm : Form
     {
-        bool Roughb, QAb, Projectsb, MyProgrb;  // White ==false && Black ==true
+
+        List<bool> bol = new List<bool> {};
         public MainForm()
         {
             InitializeComponent();
+            bol.Add(boolean_declarationfun(RoughWork.BackColor));
+            bol.Add(boolean_declarationfun(Projects.BackColor));
+            bol.Add(boolean_declarationfun(MyIdeas.BackColor));
+            bol.Add(boolean_declarationfun(QA.BackColor));
+
         }
-        
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        bool boolean_declarationfun(Color a)
+        {
+            if (a.Equals(Color.Black)) return true; else return false;
+        }
+       void fun(List<bool> a)
+        {
            
-        }
+           
+            this.RoughWork.BackColor = Color.White;
+            this.RoughWork.ForeColor = Color.Black;
+            
+            this.QA.BackColor = Color.Black;
+            this.QA.ForeColor = Color.White;
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
+            this.MyIdeas.BackColor = Color.Black;
+            this.MyIdeas.ForeColor = Color.White;
 
-        }
-        void boolean_declarationfun()
-        {
+            this.Projects.BackColor = Color.Black;
+            this.Projects.ForeColor = Color.White;
 
+            this.MyProgress.BackColor = Color.Black;
+            this.MyProgress.ForeColor = Color.White;
         }
-       
 
 
 
       
         private void RoughWork_Click(object sender, EventArgs e)
         {
+            //UI Design Section
             this.RoughWork.BackColor = Color.White;
             this.RoughWork.ForeColor = Color.Black;
 
@@ -53,6 +74,12 @@ namespace MyAssistant
 
             this.MyProgress.BackColor = Color.Black;
             this.MyProgress.ForeColor = Color.White;
+            //Ui Design Complete
+            for(int i=0;bol.Count>i;i++) { bol[i]= false; };
+            
+            bol[0] = true;
+            fun(bol);
+            Environment.(TextArea.Text)
         }
 
         private void QA_Click(object sender, EventArgs e)
@@ -71,6 +98,9 @@ namespace MyAssistant
 
             this.MyProgress.BackColor = Color.Black;
             this.MyProgress.ForeColor = Color.White;
+            for (int i = 0; bol.Count > i; i++) { bol[i] = false; };
+
+            bol[1] = true;
         }
 
         private void MyIdeas_Click(object sender, EventArgs e)
@@ -89,17 +119,25 @@ namespace MyAssistant
 
             this.MyProgress.BackColor = Color.Black;
             this.MyProgress.ForeColor = Color.White;
+
+            for (int i = 0; bol.Count > i; i++) { bol[i] = false; };
+
+            bol[2] = true;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.RoughWork.BackColor = Color.White;
-            this.RoughWork.ForeColor = Color.Black;
+
         }
 
         private void Exit_Click(object sender, EventArgs e)
         {
             ActiveForm.Close();
+        }
+
+        private void TextArea_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void Projects_Click(object sender, EventArgs e)
@@ -118,6 +156,9 @@ namespace MyAssistant
 
             this.MyProgress.BackColor = Color.Black;
             this.MyProgress.ForeColor = Color.White;
+            for (int i = 0; bol.Count > i; i++) { bol[i] = false; };
+
+            bol[3] = true;
         }
 
         private void MyProgress_Click(object sender, EventArgs e)
@@ -146,6 +187,16 @@ namespace MyAssistant
             {
                 
             }
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
