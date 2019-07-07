@@ -79,7 +79,7 @@ namespace MyAssistant
             
             bol[0] = true;
             fun(bol);
-            Environment.(TextArea.Text)
+            
         }
 
         private void QA_Click(object sender, EventArgs e)
